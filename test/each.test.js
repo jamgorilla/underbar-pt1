@@ -39,5 +39,20 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+    it('iterates every property in the list, passing the value, the corresponding key, and the entire object to the callback', () => {
+    const coffeeShop = {
+      cappuccino: 2.50,
+      espresso: 1.50,
+      macchiato: 1.50,
+      latte: 2.00
+    };
+    let count = 0;
+    _.each(coffeeShop, function(value, key, iteratedObj) {
+      expect(value).toEqual(iteratedObj[key]);
+      count += 1;
+    });
+    expect(count).toBe(4);
+  });
 });
 

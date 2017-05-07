@@ -12,4 +12,9 @@ describe('last()', () => {
   it('returns the whole array if you ask for more elements than it has', () => {
     expect(_.last(['a', 'b', 'c'], 5)).toEqual(['a', 'b', 'c']);
   });
+
+  it('returns an empty array if given a negative number', () => {
+    expect(_.last(['a', 'b', 'c'], -1)).toEqual([]);
+  });
+
 });

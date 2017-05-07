@@ -31,4 +31,9 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns true if an array contains the target multiple times', () => {
+    const nums = [1, 0, 3, 4, 5, 7, 0, 0];
+    expect(_.contains(nums, 0)).toBe(true);
+  });
+
 });

@@ -5,4 +5,10 @@ describe('uniq()', () => {
     const nums = [2, 4, 5, 5, 7, 4, 10, 2];
     expect(_.uniq(nums)).toEqual([2, 4, 5, 7, 10]);
   });
+
+  it('de-dups a list of numbers including negatives and floats', () => {
+    const nums = [2, 0.4, -5, 0.4, 5, -5, 7, -4, 10, -2];
+    expect(_.uniq(nums)).toEqual([2, 0.4, -5, 5, 7, -4, 10, -2]);
+  });
+
 });

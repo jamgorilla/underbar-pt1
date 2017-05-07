@@ -16,6 +16,11 @@ describe('every()', () => {
       const nums = [1, 3, 5, 6, 7];
       expect(_.every(nums, num => num % 2 === 1)).toBe(false);
     });
+   
+    it('returns false if not all numbers in an array are negative', () => {
+      const nums = [-1, -3, -5, -6, -7];
+      expect(_.every(nums, num => num < 0)).toBe(true);
+    });
 
   });
 });

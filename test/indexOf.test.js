@@ -26,4 +26,9 @@ describe('indexOf()', () => {
     expect(_.indexOf(arr, 'bar', 2)).toBe(3);
   });
 
+  it('returns the index of the given number', () => {
+    const arr = [1, 2, 3, 4, 5];
+    expect(_.indexOf(arr, 3, true)).toBe(2);
+  });
+
 });
